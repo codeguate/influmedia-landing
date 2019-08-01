@@ -1,0 +1,673 @@
+<html style="overflow-x: hidden">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137558386-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137558386-1');
+</script>
+<title>Influmedia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
+  </script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (screen.width < 1200) {
+        console.log(screen.width);
+        $('.logosimg').slick({
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          autoplay: true,
+          autoplaySpeed: 5000
+        });
+      } else {
+        $('.logosimg').slick({
+          slidesToShow: 8,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000
+        });
+      }
+    });
+  </script>
+</head>
+
+<body style="overflow-x: hidden" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+  <header style="margin-bottom: 2em">
+    <div class="content_idioma" style="width: 20%">
+      <p><span><a href="/EN/">Inglés</a></span> | <span>Español</span></p>
+    </div>
+    <div class="logo_influmedia aos-init aos-animate" data-aos="fade-down" style="z-index: 99;">
+      <img src="img/logo-influmedia.png">
+    </div>
+    <div class="icon_logo_redes">
+      <img style="width: 50px;height: 50px;margin-right: 30px;" src="img/youtube.png">
+    </div>
+    <div class="icon_logo_redes">
+      <img style="width: 50px;height: 50px;margin-right: 5px;" src="img/instagram.png">
+    </div>
+    <div class="icon_logo_redes">
+      <img style="width: 37px;height: 37px;margin-top: 14px;margin-right: 2px;" src="img/facebook.png">
+    </div>
+  </header>
+  <section class="section_1">
+    <div class="content_first_img">
+
+    </div>
+  </section>
+  <div class="modal_1 aos-init aos-animate" data-aos="flip-left">
+
+    <div class="header_modal">
+      <div class="content_select" style="text-align: left;">
+        <!-- <select>
+          <option><img src="img/facebook.png">Lenguaje</option>
+          <option>ES</option>
+          <option>EN</option>
+        </select> -->
+      </div>
+      <div class="influmedia_logo">
+        <img style="width: 100%" src="img/logo-influmedia.png">
+      </div>
+      <div class="close_modal">
+        <p>x</p>
+      </div>
+    </div>
+    <div class="content_modal_1">
+      <form autocomplete="off">
+        <input type="text" name="name" id="name" placeholder="Nombre">
+        <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+        <input type="number" name="phone" id="number" placeholder="Télefono">
+       <!-- <div class="two_option">
+          <select>
+            <option>País</option>
+            <option> </option>
+            <option> </option>
+            <option> </option>
+          </select>
+          <input type="text" name="name" placeholder="Estado">
+        </div> -->
+        <input class="submit_modal1" type="button" Onclick="send_email()" name="button" value="Enviar">
+      </form>
+    </div>
+  </div>
+  <div class="modal_2 aos-init aos-animate" data-aos="flip-left">
+    <div class="header_modal">
+      <div class="content_select" style="text-align: left;">
+        <!--
+			<select>
+				<option><img src="img/facebook.png">Lenguaje</option>
+				<option>ES</option>
+				<option>EN</option>
+			</select>
+                -->
+      </div>
+      <div class="influmedia_logo">
+        <img style="width: 100%" src="img/logo-influmedia.png">
+      </div>
+      <div class="close_modal">
+        <p id="close">x</p>
+      </div>
+    </div>
+    <div class="content_modal_1">
+      <form method="POST" action="#" autocomplete="off">
+        <input type="text" name="name" placeholder="Nombre">
+        <input type="mail" name="name" placeholder="Correo Electrónico">
+        <div class="two_option">
+          <select>
+            <option>País</option>
+            <option> </option>
+            <option> </option>
+            <option> </option>
+          </select>
+          <input type="text" name="name" placeholder="State">
+        </div>
+        <input type="number" name="name" placeholder="Teléfono" autocomplete="false">
+        <input type="date" name="name" placeholder="Fecha de Nacimiento">
+        <input type="password" name="name" placeholder="Contraseña" autocomplete="false">
+        <input type="password" name="name" placeholder="Confirmar Tu Contraseña" autocomplete="false">
+
+        <p style="text-align: center;color: #818181;"><input style="width: fit-content !important;margin-right: 1%"
+            type="checkbox" name="terminos">HE LEÍDO, ENTIENDO Y ACEPTO LOS TÉRMINOS Y<br>CONDICIONES Y LA POLÍTICA DE
+          PRIVACIDAD</p>
+        <input class="submit_modal1" type="submit" name="submit" value="Registrar">
+      </form>
+    </div>
+  </div>
+  <section class="section_9">
+    <div class="content_contacto">
+      <div class="title_contacto">
+        <p style="padding: 2% 0%;">¡CONT<span style="font-family: Helvetica-Bold">Á</span>CTANOS!</p>
+      </div>
+      <div class="desck_contactos">
+        <div class="content_text_1">
+          <div id="open_modal1" class="text_2"
+            style="font-size: 1em;text-align: right;margin-left: auto;margin-right: 5%;cursor: pointer">
+            <p>
+              ¿ERES CLIENTE?
+            </p>
+          </div>
+        </div>
+        <div class="content_text_2" >
+          <div class="text_2" style="font-size: 1em;cursor: pointer">
+            <p onclick="javascript:window.location.href='https://influmedia.influtech.co/users/sign_up?locale=es_CO'">
+              ¿ERES INFLUENCER?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="header_first_text">  
+      </div>
+    </div>
+  </section>
+
+  <section class="section_2">
+    <div class="content_first_text aos-init aos-animate" >
+      
+      <video style="width: 100%;" loop autobuffer autoplay muted playsinline id="myVideo">
+        <source loop autobuffer autoplay muted playsinline src="fondo.mp4" type="video/mp4">
+      </video>
+      <div class="main_text">
+        <p>NUESTRO <span class="dna">DNA</span></p>
+        <p>Conectamos marcas con su público objetivo utilizando contenido creativo, influenciadores y tecnología.</p>
+      </div>
+      <div class="second_text">
+        <div class="text_second">
+          <p class="text_1">AUTENTICIDAD</p>
+          <div class="separador_title"></div>
+          <p class="text_2">Llevamos el mensaje de tu marca de manera directa, personal y sin artificios.</p>
+        </div>
+        <div class="text_second">
+          <p class="text_1">CREATIVIDAD</p>
+          <div class="separador_title"></div>
+          <p class="text_2">Rompemos con los esquemas tradicionales para que tu marca logre un impacto memorable.</p>
+        </div>
+      </div>
+      <div class="content_footer_video">
+        
+      </div>
+    </div>
+  </section>
+  <section class="section_3">
+    <div class="valores_influenciadores">
+      <div class="title_valores">
+        <p>¿POR QU<span style="font-family: Helvetica-Bold">É</span> MARKETING DE INFLUENCIADORES?</p>
+      </div>
+      <div class="valores">
+        <div class="column_valores aos-init aos-animate" data-aos="fade-up-right">
+          <p class="first">ALCANCE</p>
+          <p class="second"><span class="number_text">49%</span> Usuarios con "Ad Blockers" en Estados Unidos</p>
+        </div>
+        <div class="column_valores aos-init aos-animate" data-aos="fade-up">
+          <p class="first">CONFIANZA</p>
+          <p class="second"><span class="number_text">92%</span> De personas confían en extraños sobre marcas</p>
+        </div>
+        <div class="column_valores aos-init aos-animate" data-aos="fade-up-left">
+          <p class="first">EFECTIVIDAD</p>
+          <p class="second"><span class="number_text">94%</span> De aquellos que usaron marketing de influenciadores
+            creen que es una estrategia efectiva.</p>
+        </div>
+      </div>
+      <p class="content_text_f">
+      </p>
+      <p class="texto_fuente">*Fuente: Nielsen</p>
+      <p></p>
+
+    </div>
+  </section>
+  <section class="section_4">
+    <div class="content_video">
+      <div class="content_video_player aos-init aos-animate" data-aos="fade-right">
+        <iframe width="100%" height="500em" src="https://www.youtube.com/embed/v7YnD_F6S3g" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      </div>
+      <div id="texto_video" data-aos="fade-left" class="aos-init aos-animate">
+        <p class="title_video">¿POR QU<span style="font-family: Helvetica-Bold">É</span> INFLUMEDIA?</p>
+        <p class="description_video">Conectamos tu marca con el influenciador correcto para crear contenido valioso e
+          historias únicas.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section_5">
+    <div class="title_menu aos-init aos-animate" data-aos="fade-down">
+      <p>MEN<span style="font-family: Helvetica-Bold">Ú</span> DE SERVICIOS</p>
+    </div>
+    <div class="content_menu">
+      <div data-aos="fade-up-right" class="aos-init aos-animate">
+        <p>PLANIFICACI<span style="font-family: Helvetica-Bold">Ó</span>N</p>
+        <p>Nuestro equipo creará un plan de mercadeo y publicidad personalizado y detallado para tu marca, de modo que
+          se establezca desde el inicio los pasos a seguir.</p>
+      </div>
+      <div data-aos="fade-up-left" class="aos-init aos-animate">
+        <p>TECNOLOG<span style="font-family: Helvetica-Bold">Í</span>A</p>
+        <p>Contamos con las herramientas digitales para agilizar los procesos, optimizar resultados y proveer data en
+          tiempo real.</p>
+      </div>
+    </div>
+    <div class="content_menu">
+      <div data-aos="fade-up-right" class="aos-init">
+        <p>CREATIVIDAD</p>
+        <p>Es la clave del éxito de toda campaña, el ingrediente que activa la imaginación del público. En Influmedia,
+          la creatividad se nos sale por los poros.</p>
+      </div>
+      <div data-aos="fade-up-left" class="aos-init">
+        <p>ESTRATEGIA</p>
+        <p>Siguiendo los pasos establecidos en el proceso de planificaión, crearemos la estrategia que mejor funcione
+          para las necesidades de tu marca.</p>
+      </div>
+    </div>
+    <div class="content_menu">
+      <div data-aos="fade-up-right" class="aos-init">
+        <p>PRODUCCI<span style="font-family: Helvetica-Bold">Ó</span>N</p>
+        <p>¡Manos a la obra! Es la etapa en que nos enrollamos las mangas para hacer realidad la visión de tu marca</p>
+      </div>
+      <div data-aos="fade-up-left" class="aos-init">
+        <p>COMPRA DE MEDIOS</p>
+        <p>Evaluamos todos los medios (tradicionales y digitales) para alcanzar tu público objetivo.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section_5_1">
+    <div class="title_menu">
+      <p>MEN<span style="font-family: Helvetica-Bold">Ú</span> SERVICIOS</p>
+    </div>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade" style="display: block;">
+        <div class="content_menu">
+          <div>
+            <p>PLANIFICACI<span style="font-family: Helvetica-Bold">Ó</span>N</p>
+            <p>Nuestro equipo creará un plan de mercade y publicidad personalizado y detallado para tu marca, de modo
+              que se establezca desde el inicio los pasos a seguir.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade" style="display: none;">
+        <div class="content_menu">
+          <div>
+            <p>TECNOLOG<span style="font-family: Helvetica-Bold">Í</span>A</p>
+            <p>Contamos con las herramientas digitales para agilizar los procesos, optimizar resultados y proveer data
+              en tiempo real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade" style="display: none;">
+        <div class="content_menu">
+          <div>
+            <p>CREATIVIDAD</p>
+            <p>Es la clave del éxito de toda campaña, el ingrediente que activa la imaginación del público. En
+              influmedia, la creatividad se nos sale por los poros.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade" style="display: none;">
+        <div class="content_menu">
+          <div>
+            <p>ESTRATEGIA</p>
+            <p>Siguiendo los pasos establecidos en el proceso de planificaión, crearemos la estrategia que mejor
+              funcione para las necesidades de tu marca.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none;">
+        <div class="content_menu">
+          <div>
+            <p>PRODUCCI<span style="font-family: Helvetica-Bold">Ó</span>N</p>
+            <p>¡Manos a la obra! Es la etapa en que nos enrollamos las mangas para hacer realidad la vision de tu marca
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none;">
+        <div class="content_menu">
+          <div>
+            <p>COMPRA DE MEDIOS</p>
+            <p>Evaluamos todos los medios (tradicionales y digitales) para alcanzar tu público objetivo.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+  </section>
+  <section class="section_6">
+    <div class="content_claves">
+      <div class="title_claves aos-init" data-aos="zoom-in-down">
+        <p>CLAVES PARA EL <span style="font-family: Helvetica-Bold">É</span>XITO</p>
+      </div>
+      <div class="body_claves">
+        <div>
+          <div class="title_desck aos-init" data-aos="zoom-in-down" data-aos-duration="1000">
+            <p><span>1</span>IDENTIFICACI<text style="font-family: Helvetica-Bold">Ó</text>N DE INFLUENCIADORES</p>
+          </div>
+          <div class="desck_claves">
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="500">
+              <div>
+                <img src="img/img_1_.1.png">
+              </div>
+              <div>
+                <p>Aprendizaje mecanizado e inteligencia predictiva.</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="1500">
+              <div>
+                <img src="img/img_1.2.png">
+              </div>
+              <div>
+                <p>Motor de búsqueda robusto para filtrar perfiles de influenciadores.</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="2500">
+              <div>
+                <img src="img/img_1.3.png">
+              </div>
+              <div>
+                <p>Análisis de objetivos para mejor planificación.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="title_desck aos-init" data-aos="zoom-in-down" data-aos-duration="1000">
+            <p><span>2</span>ESTRATEGIA DE CONTENIDO</p>
+          </div>
+          <div class="desck_claves">
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="2500">
+              <div>
+                <img src="img/img_2.1.png">
+              </div>
+              <div>
+                <p>Análisis de necesidades de la marca.</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="1500">
+              <div>
+                <img src="img/img_2.2.png">
+              </div>
+              <div>
+                <p>Creación de contenidos.</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="500">
+              <div>
+                <img src="img/img_2.3.png">
+              </div>
+              <div>
+                <p>Programación y publicación de contenidos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="title_desck aos-init" data-aos="zoom-in-down" data-aos-duration="1000">
+            <p><span>3</span>MEDICI<text style="font-family: Helvetica-Bold">Ó</text>N DE DESEMPE<text
+                style="font-family: Helvetica-Bold">Ñ</text>O Y COSTOS</p>
+          </div>
+          <div class="desck_claves" id="content_four_icons">
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="500">
+              <div>
+                <img src="img/01.png">
+              </div>
+              <div>
+                <p><span class="marca_text">MITSUBISHI</span><br> <span class="text_marca_num">40%</span> Incremento de
+                  ventas</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="1500">
+              <div>
+                <img src="img/02.png">
+              </div>
+              <div>
+                <p><span class="marca_text">JCP</span><br><span class="text_marca_num">1250%</span> en medios ganados
+                </p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="1500">
+              <div>
+                <img src="img/03.png">
+              </div>
+              <div>
+                <p><span class="marca_text">FRITO LAY'S</span><br> <span class="text_marca_num">-40% </span>CPE</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" id="for" data-aos="fade-down" data-aos-duration="500">
+              <div>
+                <img src="img/04.png">
+              </div>
+              <div>
+                <p><span class="marca_text">#HOYCONSTRUIMOS</span><br> <span class="text_marca_num">-40% </span>CPE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="title_desck aos-init" data-aos="zoom-in-down" data-aos-duration="1000">
+            <p><span>4</span>RETURN ON INVESTMENT</p>
+          </div>
+          <div class="desck_claves">
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="500">
+              <div>
+                <img src="img/img_4.1.png">
+              </div>
+              <div>
+                <p><span class="text_marca_num">Mejor estrategia</span> con informes de planificación,
+                  implementación,<br>análisis y ROI</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="1500">
+              <div>
+                <img src="img/img_4.2.png">
+              </div>
+              <div>
+                <p><span class="text_marca_num">Pagar por rendimiento</span> no se trata de tarifas, sino de resultados
+                  (KPI's).</p>
+              </div>
+            </div>
+            <div class="only_one aos-init" data-aos="fade-down" data-aos-duration="2500">
+              <div>
+                <img src="img/img_4.3.png">
+              </div>
+              <div>
+                <p><span class="text_marca_num">Trabajando en colaboración</span> podemos hacer más campañas poderosas e
+                  influyentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_7">
+    <div class="content_socios">
+      <div class="title_socios">
+        <div class="left_word_content">
+          <p class="left_word"></p>
+        </div>
+        <div class="word">
+          <p>SOCIOS</p>
+        </div>
+        <div class="left_word_content">
+          <p class="right_word"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_8">
+    <div class="content_marcas">
+      <div class="marcas" id="regional">
+        <div class="logosimg" style="width: 90%;">
+          <img class="slick_imagen" src="img/adidas_logo.png">
+          <img class="slick_imagen" src="img/avianca_logo.png">
+          <img class="slick_imagen" src="img/bbva_logo.png">
+          <img class="slick_imagen" src="img/claro_logo.png">
+          <img class="slick_imagen" src="img/heineken_logo.png">
+          <img class="slick_imagen" src="img/mitsubishi_logo.png">
+          <img class="slick_imagen" src="img/nintendo_logo.png">
+          <img class="slick_imagen" src="img/nissan_logo.png">
+          <img class="slick_imagen" src="img/pfizer_logo.png">
+          <img class="slick_imagen" src="img/samsung_logo.png">
+          <img class="slick_imagen" src="img/sony_logo.png">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_8_1">
+    <div class="first_marcas">
+      <img class="slick_imagen" src="img/nissan_logo.png">
+      <img class="slick_imagen" src="img/bbva_logo.png">
+      <img class="slick_imagen" src="img/mitsubishi_logo.png">
+      <img class="slick_imagen" src="img/adidas_logo.png">
+      <img class="slick_imagen" src="img/pfizer_logo.png">
+      <img class="slick_imagen" src="img/avianca_logo.png">
+      <img class="slick_imagen" src="img/claro_logo.png">
+    </div>
+    <div class="second_marcas">
+      <img class="slick_imagen" src="img/sony_logo.png">
+      <img class="slick_imagen" src="img/nintendo_logo.png">
+      <img class="slick_imagen" src="img/samsung_logo.png">
+      <img class="slick_imagen" src="img/heineken_logo.png">
+    </div>
+  </section>
+  <!--
+<div class="marcas" id="regional">
+		<h1>Socios Locales y Regionales</h1>
+	<div class="logosimg">
+		<img src="img/Logo1.png">
+		<img src="img/Logo2.png">
+		<img src="img/Logo3.png">
+		<img src="img/Logo4.png">
+		<img src="img/logo5.png">
+		<img src="img/Logo6.png">
+		<img src="img/Logo7.png">
+		<img src="img/Logo8.png">
+		<img src="img/Logo9.png">
+		<img src="img/Logo10.png">
+		<img src="img/Logo11.png">
+
+	</div>
+</div>
+ -->
+
+
+  <footer>
+    <div class="content_contactanos" style="display: flex;">
+      <div class="contactanos_left" style="width: 50%">
+        <div class="redes_sociales">
+          <a href="#">Home</a>
+          <a href="#">Contactanos</a>
+        </div>
+        <br>
+        <div class="icons_redes">
+          <div>
+            <img style="width: 50px;height: 50px" src="img/facebook.png">
+          </div>
+          <div>
+            <img style="width: 50px;height: 50px" src="img/instagram.png">
+          </div>
+          <div>
+            <img style="width: 50px;height: 50px" src="img/youtube.png">
+          </div>
+        </div>
+      </div>
+      <div class="footer_img" style="width: 50%;text-align: right;margin: 0 3%">
+        <img src="img/logofooter.png" class="logo_footer">
+      </div>
+    </div>
+  </footer>
+  <div class="fondo_modal1">
+
+  </div>
+
+
+  <script>
+
+    function send_email(){
+        
+        var template_params = {
+           "nombre": document.getElementById("neme").value,
+           "email": document.getElementById("email").value,
+           "telefono": document.getElementById("phone").value
+        }
+        $.ajax({
+          type: "GET",
+          url: "https://5bconectate.com/influmedia/backend/public/api/send?email="+template_params.email+"&nombre="+template_params.nombre+"&telefono="+template_params.telefono+"",
+          success: function (response) {
+            if (response.email) {
+              $('.modal_1').fadeOut();
+              $('.fondo_modal1').fadeOut();
+              modal1=false;
+              
+            }
+          }
+        });
+    
+        
+    }
+    
+   
+  </script>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+  </script>
+  <!-- Font intro -->
+</body>
+</html>
