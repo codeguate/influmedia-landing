@@ -86,10 +86,11 @@
       </div>
     </div>
     <div class="content_modal_1">
-      <form autocomplete="off">
+        <div class="loader" id="loader" style="display:none"></div>
+      <form id="myDiv" autocomplete="off">
         <input type="text" name="name" id="name" placeholder="Nombre">
         <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-        <input type="number" name="phone" id="number" placeholder="Télefono">
+        <input type="number" name="phone" id="phone" placeholder="Télefono">
        <!-- <div class="two_option">
           <select>
             <option>País</option>
@@ -162,7 +163,7 @@
         </div>
         <div class="content_text_2" >
           <div class="text_2" style="font-size: 1em;cursor: pointer">
-            <p onclick="javascript:window.location.href='https://influmedia.influtech.co/users/sign_up?locale=es_CO'">
+            <p onclick="javascript:window.location.href='https://influmedia.influtech.co/'">
               ¿ERES INFLUENCER?
             </p>
           </div>
@@ -608,11 +609,19 @@
 
 
   <script>
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.opacity = 1;
+}
 
+function hidePage() {
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("myDiv").style.opacity = 0.3;
+}
     function send_email(){
-        
+      hidePage()
         var template_params = {
-           "nombre": document.getElementById("neme").value,
+           "nombre": document.getElementById("name").value,
            "email": document.getElementById("email").value,
            "telefono": document.getElementById("phone").value
         }
@@ -624,6 +633,7 @@
               $('.modal_1').fadeOut();
               $('.fondo_modal1').fadeOut();
               modal1=false;
+              showPage()
               
             }
           }

@@ -81,7 +81,7 @@ $( document ).ready(function() {
 		<form method="POST" action="#" autocomplete="nope">
 			<input type="text" name="name" id="name" placeholder="Name">
 			<input type="email" name="email" id="email" placeholder="Email">
-			<input type="number" name="phone" id="number" placeholder="Phone">
+			<input type="number" name="phone" id="phone" placeholder="Phone">
 			<!-- <div class="two_option" autocomplete="off">
 				<select>
 					<option selected>country</option>
@@ -151,7 +151,7 @@ $( document ).ready(function() {
 			</div>
 			<div class="content_text_2" id="open_modal2">
 				<div class="text_2" style="font-size: 1em">
-					<p>
+					<p onclick="javascript:window.location.href='https://influmedia.influtech.co/'">
 						ARE YOU A CONTENT<br> CREATOR?
 
 					</p>
@@ -584,7 +584,7 @@ $( document ).ready(function() {
   function send_email(){
         
         var template_params = {
-           "nombre": document.getElementById("neme").value,
+           "nombre": document.getElementById("name").value,
            "email": document.getElementById("email").value,
            "telefono": document.getElementById("phone").value
         }
